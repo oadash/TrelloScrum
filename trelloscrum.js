@@ -43,7 +43,7 @@ var debounce = function (func, threshold, execAsap) {
 var obsConfig = { childList: true, characterData: true, attributes: false, subtree: true };
 
 //default story point picker sequence (can be overridden in the Scrum for Trello 'Settings' popup)
-var _pointSeq = ['?', 0, .5, 1, 2, 3, 5, 8, 13, 21, S, M, L, XL, XS];
+var _pointSeq = ['?', 0, .5, 1, 2, 3, 5, 8, 13, 21,];
 //attributes representing points values for card
 var _pointsAttr = ['cpoints', 'points'];
 
@@ -58,8 +58,8 @@ S4T_SETTING_DEFAULTS[SETTING_NAME_ESTIMATES] = _pointSeq.join();
 refreshSettings(); // get the settings right away (may take a little bit if using Chrome cloud storage)
 
 //internals
-var reg = /((?:^|\s))\((\x3f|\d*\.?\d+\w)(\))\s?/m, //parse regexp- accepts digits, decimals and '?', surrounded by ()
-    regC = /((?:^|\s))\[(\x3f|\d*\.?\d+\w)(\])\s?/m, //parse regexp- accepts digits, decimals and '?', surrounded by []
+var reg = /((?:^|\s))\((\x3f|\d*\.?\d+)(\))\s?/m, //parse regexp- accepts digits, decimals and '?', surrounded by ()
+    regC = /((?:^|\s))\[(\x3f|\d*\.?\d+)(\])\s?/m, //parse regexp- accepts digits, decimals and '?', surrounded by []
     iconUrl, pointsDoneUrl,
 	flameUrl, flame18Url,
 	scrumLogoUrl, scrumLogo18Url;
