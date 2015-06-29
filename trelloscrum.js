@@ -43,7 +43,7 @@ var debounce = function (func, threshold, execAsap) {
 var obsConfig = { childList: true, characterData: true, attributes: false, subtree: true };
 
 //default story point picker sequence (can be overridden in the Scrum for Trello 'Settings' popup)
-var _pointSeq = ['?', 0, .5, 1, 2, 3, 5, 8, 13, 21];
+var _pointSeq = ['?', 0, .5, 1, 2, 3, 5, 8, 13, 21, S, M, L, XL, XS];
 //attributes representing points values for card
 var _pointsAttr = ['cpoints', 'points'];
 
